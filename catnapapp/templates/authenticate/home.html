@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}CatNapSite{% endblock %}
+
+{% block content %}
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="{% static 'styles.css' %}" rel="stylesheet">
+
+{% if user.is_authenticated %}
+    
+
+    
+{% endif %}
+
+<style>
+.user-info {
+  width: 100%;
+  overflow: hidden;
+}
+
+.username {
+  float: left;
+  width: 50%;
+}
+
+.email {
+  float: right;
+  width: 50%;
+  text-align: right;
+}
+</style>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h3 class="h3txt text-center my-3">Welcome to CatNap HQ</h3>
+    </div>
+  </div>
+
+<div class=videomenu>
+  <div class="row">
+    <div class="col-12">
+      <img src="{% static 'images/band.png' %}" class="img-fluid" alt="Band">
+    </div>
+  </div>
+</div>
+
+
+<br></br>
+<br></br>
+
+  <div class="row">
+    <div class="col-12">
+      <p class="text-center my-3">CatNap are a Emo Two Piece from Sunny Worthing</p>
+      <h2 class="text-center my-3">We are....</h2>
+    </div>
+  </div>
+<div class=videomenu>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card border-info mb-3 text-white bg-dark">
+        <img src="{% static 'images/james_beach.png' %}" class="card-img-top" alt="James">
+        <div class="card-body">
+          <h5 class="card-title">James</h5>
+          <p class="card-text">Lead Computer programmer, and Nigerian cook in CatNap.</p>
+          <a href="{% url 'about' %}" class="btn btn-primary">About James</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card border-info mb-3 text-white bg-dark">
+        <img src="{% static 'images/adam.jpg' %}" class="card-img-top" alt="Adam">
+        <div class="card-body">
+          <h5 class="card-title">Adam</h5>
+          <p class="card-text">Lead drummer and alpha male in CatNap</p>
+          <a href="{% url 'about' %}" class="btn btn-primary">About Adam</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock %}

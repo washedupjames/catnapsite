@@ -1,0 +1,72 @@
+
+
+
+{% extends 'base.html' %}
+{% load static %} 
+
+{% block title %}About James Parker{% endblock %}
+
+
+
+
+{% block content %}
+
+
+
+<link href="{% static 'styles.css' %}" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<header>
+<center><h1 class=h3txt>New song 2 intro</h1></center>
+</header>
+
+<!DOCTYPE html>
+<html>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Videos</title>
+	
+	
+
+
+		
+
+<iframe width="1050" height="635" src="https://www.youtube.com/embed/eQ6cHQ7a2E0" title="song 2 first bit" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+{% for comment in comments %}
+  <div class="comment">
+    <img src="{{ comment.author.profile_image }}" alt="Profile Image">
+    <div class="comment-details">
+      <h4>{{ comment.author.username }}</h4>
+      <p>{{ comment.text }}</p>
+      <span class="comment-date">{{ comment.date_created|date:"F j, Y, g:i a" }}</span>
+    </div>
+  </div>
+{% endfor %}
+
+
+<form method="post">
+  {% csrf_token %}
+  <div class="form-group">
+    <textarea class="form-control" rows="3" placeholder="Add a public comment..." name="comment-text"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Comment</button>
+</form>
+
+
+
+
+
+
+
+
+
+	
+
+
+	
+	
+
+{% endblock %}
+

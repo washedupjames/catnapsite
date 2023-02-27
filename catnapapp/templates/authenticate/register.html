@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}CatNapSite{% endblock %}
+
+{% block content %}
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="{% static 'styles.css' %}" rel="stylesheet">
+
+
+<h3 class="h3txt text-center my-3">Register</h3>
+
+
+
+
+<form method="POST" action="{% url 'register' %}">
+  {% csrf_token %}
+
+  {% if form.errors %}
+    <p>Your form has errors...</p>
+  {% endif %}
+
+  {{ form.as_p }}
+
+  <input type="submit" value="Register" class="btn btn-secondary">
+</form>
+
+
+  
+
+
+{% endblock %}

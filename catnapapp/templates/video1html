@@ -1,0 +1,44 @@
+
+{% extends 'base.html' %}
+{% load static %} 
+
+{% block title %}About James Parker{% endblock %}
+
+
+
+
+{% block content %}
+
+
+
+<link href="{% static 'styles.css' %}" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<header>
+<center><h1 class=h3txt>Videos</h1></center>
+</header>
+
+<!DOCTYPE html>
+<html>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Videos</title>
+
+hi
+	
+	
+
+
+<body>
+	
+
+
+
+
+	
+	<br></br>
+
+</body>
+
+{% endblock %}
+

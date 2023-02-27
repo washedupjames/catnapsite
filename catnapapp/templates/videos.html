@@ -1,0 +1,66 @@
+
+{% extends 'base.html' %}
+{% load static %} 
+
+{% block title %}About James Parker{% endblock %}
+
+
+
+
+{% block content %}
+
+
+
+<link href="{% static 'styles.css' %}" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<header>
+<center><h1 class=h3txt>Videos</h1></center>
+</header>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Videos</title>
+	
+	
+
+</head>
+<body>
+	
+	<div class=videomenu>
+		<div class="videocontainer">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/eQ6cHQ7a2E0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<div class="video-description">
+				<h1 class=videotitle> <a class="nav-link" href="{% url 'video1' %}">New song 2 intro</a></h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget mauris eleifend, vulputate quam eu, convallis risus. Duis vel turpis eget justo gravida malesuada. Fusce vel enim euismod, vestibulum nibh eu, sollicitudin quam. Nam eget eros libero.</p>
+			</div>
+		</div>
+		<div class="videocontainer">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_HERE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<div class="video-description">
+				<h1 class=videotitle>Video Title 2</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget mauris eleifend, vulputate quam eu, convallis risus. Duis vel turpis eget justo gravida malesuada. Fusce vel enim euismod, vestibulum nibh eu, sollicitudin quam. Nam eget eros libero.</p>
+			</div>
+		</div>
+		<div class="videocontainer">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_HERE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<div class="video-description">
+				<h1 class=videotitle>Video Title 3</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget mauris eleifend, vulputate quam eu, convallis risus. Duis vel turpis eget justo gravida malesuada. Fusce vel enim euismod, vestibulum nibh eu, sollicitudin quam. Nam eget eros libero.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+	
+	<br></br>
+
+</body>
+
+{% endblock %}
+

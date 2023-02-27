@@ -1,0 +1,80 @@
+
+{% extends 'base.html' %}
+{% load static %} 
+
+{% block title %}About James Parker{% endblock %}
+
+
+
+
+{% block content %}
+
+
+
+<link href="{% static 'styles.css' %}" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<header>
+<center><h1 class=h3txt>Videos</h1></center>
+</header>
+
+<body>
+		<br></br>
+		<br></br>
+		
+
+		<section class="videomenu">
+
+				<h1 class="videoheading">Practace at Sound House 2022</h1>
+				
+				
+				<div class="paper">
+									
+					<center><h4 class="videotextheading" >Just messing around</h4></center>
+					<br></br>
+					<center><p class=videotext handwrighting>twinkle riffs and flowery drums at sound house mate. playing guitar and drums and hanging out with our emotions</p></center>
+				</div>
+					
+							
+					
+
+
+					<div class=width200>
+						<div class=videoWrapper>
+							<iframe width="400" height="315" src="https://www.youtube.com/embed/Qu3VoeM1laM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						</div>
+					</div>
+				
+			
+		</section>
+
+		<br></br>
+
+
+		<section class="videomenu">
+
+		<div class="paper">
+					<br></br>
+					
+					<center><h4 >Just messing around</h4></center>
+					<center><p class=handwrighting>Emotional punk rock with our old band with Simon. Adam also played bass for this band and sings, man he dose so many things</p></center>
+				</div>
+					
+							
+					
+
+
+					<div class=width200>
+						<div class=videoWrapper>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/2sGxZPVdrTA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						</div>
+					</div>
+				
+		</section>	
+
+
+
+</body>
+
+{% endblock %}
+
