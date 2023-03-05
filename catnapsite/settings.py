@@ -75,11 +75,15 @@ WSGI_APPLICATION = 'catnapsite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': OS.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        
     }
 }
 
+DATABASES['default'] = dj_database_url.config(default='postgres://wdmktjmqbsaqhl:3de78645674172eb12e017aab601bc34cb3ef738347dea2530d9a9cad73d609f@ec2-54-173-77-184.compute-1.amazonaws.com:5432/d8a0ahn289ss32')
+
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
